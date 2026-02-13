@@ -9,7 +9,7 @@ const makedir = (path) => {
         console.log("unable to make directory", err);
     }
 };
-makedir("./Day6")
+//makedir("../Day6")
 
 
 const readdir = (path) => {
@@ -21,7 +21,7 @@ const readdir = (path) => {
         console.log("unable to read directory", err);
     }
 };
-readdir("./Day1")
+readdir("../Day1");
 
 const removedir = (path) => {
     try {
@@ -33,4 +33,4 @@ const removedir = (path) => {
     }
 };
 
-removedir("./Day6");
+//removedir("./Day6");
