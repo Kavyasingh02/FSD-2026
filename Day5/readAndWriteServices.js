@@ -18,14 +18,36 @@ import { json } from 'stream/consumers';
 //     console.log("unable to read file",err);
 //    }
 // }
- export const readJsonFile=async(path)=>{
-    try{
- const data= await fs.readFile(path,"utf-8");
- console.log(data);
+//  export const readJsonFile=async(path)=>{
+//     try{
+//  const data= await fs.readFile(path,"utf-8");
+//  console.log(data);
  
- return JSON.parse(data);
-    }catch(err){
-        console.log("Error ocuured",err);
+//  return JSON.parse(data);
+//     }catch(err){
+//         console.log("Error ocuured",err);
         
+//     }
+// }
+
+export const readJsonFile = async (path) => {
+    try {
+        const fileData = await fs.readFile(path, "utf-8");
+        return JSON.parse(fileData);
+    } catch (error) {
+        console.log("unable to read data " ,error);
     }
+}
+export const writeJsonFile = async(path, data)=>{
+    let status=0, msg="";
+    try {
+        await fs.writeFile(path,JSON.stringify(data,2,null));
+        status=200;
+        msg="Data has been written successfully";       
+    } catch (error) {
+        status=500;
+        msg="unable to write";  
+        console.log(error);   
+    }
+    return {status,msg}
 }
