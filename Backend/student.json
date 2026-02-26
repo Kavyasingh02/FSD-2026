@@ -1,0 +1,22 @@
+[
+    {
+        "name": "kavya",
+        "id": 3008,
+        "branch": "cse"
+    },
+    {
+        "name": "Manav",
+        "id": 3009,
+        "branch": "ai-ml"
+    },
+    {
+        "name": "Aditi",
+        "id": 3010,
+        "branch": "cs"
+    },
+    {
+        "name": "Shriva",
+        "id": 3011,
+        "branch": "cs"
+    }
+]
